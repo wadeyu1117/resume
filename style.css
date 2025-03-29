@@ -431,4 +431,63 @@ section ul li::before {
          font-size: 0.8rem;
          padding: 4px 8px;
      }
+    
 }
+/* Portfolio Section Styles */
+.portfolio-item .portfolio-wrap {
+    transition: 0.3s;
+    /* height: 100%; 使卡片等高，已加在 HTML 的 class="h-100" */
+    display: flex; /* 使用 Flexbox 來讓連結保持在底部 */
+    flex-direction: column; /* 垂直排列內容 */
+}
+
+.portfolio-item .portfolio-wrap:hover {
+    transform: translateY(-5px); /* 稍微向上移動 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 增加陰影 */
+}
+
+.portfolio-item img {
+    /* 可以設定圖片最大高度，並保持比例 */
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover; /* 裁切圖片以填滿空間，保持比例 */
+}
+
+.portfolio-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* 讓 info 區塊填滿剩餘空間 */
+}
+
+ .portfolio-info h4 a {
+     color: #343a40; /* 標題連結顏色 */
+     text-decoration: none;
+ }
+  .portfolio-info h4 a:hover {
+     color: #BD5D38; /* 懸停時使用主題色 */
+ }
+
+.portfolio-info p {
+    color: #6c757d; /* 描述文字顏色 */
+    font-size: 0.9em;
+    flex-grow: 1; /* 讓描述填滿空間，把連結推到底部 */
+}
+
+.portfolio-links a {
+    color: #BD5D38; /* 使用你的主題色 */
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+ .portfolio-links a i {
+     margin-right: 4px;
+ }
+
+.portfolio-links a:hover {
+    color: #8c4122; /* 主題色的深色版 */
+}
+
+ /* 確保 Font Awesome 圖示垂直對齊 */
+ .portfolio-links a i {
+     vertical-align: middle;
+ }
